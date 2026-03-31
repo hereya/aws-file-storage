@@ -1,0 +1,6 @@
+name: hereya/aws-file-storage
+version: 0.1.0
+description: "Provisions scoped S3 access for an app within a shared bucket. Exports IAM policy and env vars for a dedicated prefix."
+visibility: public
+iac: cdk
+infra: aws
