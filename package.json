@@ -1,6 +1,6 @@
 {
   "name": "hereya-aws-file-storage",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "bin": {
     "hereya-aws-file-storage": "bin/hereya-aws-file-storage.js"
   },
