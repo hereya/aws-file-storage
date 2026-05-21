@@ -45,14 +45,19 @@ policy to the app Lambda's execution role.
 
 ### `deleteObjects` shape
 
+⚠️ **Must be a JSON-encoded string in hereyavars**, not an inline YAML
+array. Hereya serializes parameter values via `String(value)` when
+populating env vars, which mangles arrays / objects into
+`"[object Object]"`. Quote it:
+
 ```yaml
 # hereyaconfig/hereyavars/hereya--aws-file-storage.yaml
-deleteObjects:
-  - after: 7
-    subPrefix: attachments
-  - after: 30
-    subPrefix: reports
+deleteObjects: '[{"after": 7, "subPrefix": "attachments"}, {"after": 30, "subPrefix": "reports"}]'
 ```
+
+When hereya gains native JSON serialization of structured params,
+the inline-YAML form will also work; until then, stick with the
+JSON-encoded string.
 
 - `after`: positive integer, in **days**.
 - `subPrefix`: string. Leading / trailing slashes are stripped. The
