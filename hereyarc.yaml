@@ -1,5 +1,5 @@
 name: hereya/aws-file-storage
-version: 0.2.0
+version: 0.2.1
 description: "Provisions scoped S3 access for an app within a shared bucket. Exports IAM policy + env vars for a deterministically-assigned prefix. Optional deleteObjects parameter installs S3 lifecycle rules under named sub-prefixes."
 visibility: public
 iac: cdk
